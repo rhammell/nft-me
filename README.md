@@ -1,7 +1,9 @@
 # NFT-Me
 NFT-Me is a smart contract and companion web app that allows users to capture images from their webcam and mint them as NFTs.
 
-Included is smart contract source code that defines an 'NFT-Me' ERC721 token, intended to be deployed to the Ethereum Rinkeby Testnet and Polygon Mumbai Testnet. The React app frontend provides an interface for users to connect their MetaMask wallet, capture webcam images, and select which network to mint to. 
+Included is smart contract source code that defines an 'NFT-Me' ERC721 token, intended to be deployed to the Ethereum Rinkeby Testnet and Polygon Mumbai Testnet. 
+
+The React app frontend provides an interface for users to connect their MetaMask wallet, capture webcam images, and select which network to mint to. 
 
 Images and metadata are uploaded to IPFS, and included in the transaction to create a new token on the contract. 
 
