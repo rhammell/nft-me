@@ -33,7 +33,7 @@ Rename `.env.example` to `.env` and replace the deault values with your unique v
 | MUMBAI_NODE_URL                  | URL for Mumbai network node; Ex. Moralis Nodes or Infura       |
 | RINKEBY_NODE_URL                 | URL for Rinkeby network node; Ex. Moralis Nodes or Infura     |
 | ETHERSCAN_API_KEY                | Etherscan.io API Key; Required for Rinkeby contract verification |
-| POLYGONSCAN_API_KEY              | Polyscan.con API Key; Required for Mumbai contract verification  |
+| POLYSCAN_API_KEY              | Polyscan.con API Key; Required for Mumbai contract verification  |
 
 ## Smart Contract Setup
 
