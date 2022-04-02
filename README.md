@@ -25,6 +25,7 @@ These values must be defined as environment variables within an `.env` file in t
 
 Rename `.env.example` to `.env` and replace the deault values with your unique values. The list of required variables are listed below.
 
+```bash
 - REACT_APP_MORALIS_APPLICATION_ID: Application ID provided for a Moralis server.
 - REACT_APP_MORALIS_SERVER_URL:  URL provided for a Moralis server.
 - MNEMONIC: = 12 word mnemonic for wallet used to deploy contracts.
@@ -32,6 +33,7 @@ Rename `.env.example` to `.env` and replace the deault values with your unique v
 - RINKEBY_NODE_URL = URL for Rinkeby network node. Ex. Moralis Speedy Nodes or Infura.
 - ETHERSCAN_API_KEY = API Key from Etherscan.io. Required for Rinkeby contract verification. 
 - POLYGONSCAN_API_KEY = API Key from Polyscan.con. Required for Mumbai contract verification. 
+```
 
 ## Smart Contract Setup
 
