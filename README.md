@@ -30,10 +30,10 @@ Rename `.env.example` to `.env` and replace the deault values with your unique v
 | REACT_APP_MORALIS_APPLICATION_ID | Application ID provided for a Moralis server                           |
 | REACT_APP_MORALIS_SERVER_URL     | URL provided for a Moralis server                                      |
 | MNEMONIC                         | 12 word mnemonic for wallet used to deploy contracts                   |
-| MUMBAI_NODE_URL                  | URL for Mumbai network node. Ex. Moralis Speedy Nodes or Infura.       |
-| RINKEBY_NODE_URL                 | URL for Rinkeby network node. Ex. Moralis Speedy Nodes or Infura.      |
-| ETHERSCAN_API_KEY                | API Key from Etherscan.io. Required for Rinkeby contract verification. |
-| POLYGONSCAN_API_KEY              | API Key from Polyscan.con. Required for Mumbai contract verification.  |
+| MUMBAI_NODE_URL                  | URL for Mumbai network node. Ex. Moralis Nodes or Infura.       |
+| RINKEBY_NODE_URL                 | URL for Rinkeby network node. Ex. Moralis Nodes or Infura.      |
+| ETHERSCAN_API_KEY                | Etherscan.io API Key. Required for Rinkeby contract verification. |
+| POLYGONSCAN_API_KEY              | Polyscan.con API Key. Required for Mumbai contract verification.  |
 
 ## Smart Contract Setup
 
