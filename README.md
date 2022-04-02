@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# NFT-Me
+NFT-Me is a smart contract and companion web app that allows users to capture images from their webcam and mint them as NFTs.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Included is smart contract source code that defines an 'NFT-Me' ERC721 token, intended to be deployed to the Ethereum Rinkeby Testnet and Polygon Mumbai Testnet. The React app frontend provides an interface for users to connect their MetaMask wallet, capture webcam images, and select which network to mint to. 
 
-## Available Scripts
+Images and metadata are uploaded to IPFS, and included in the transaction to create a new token on the contract. 
 
-In the project directory, you can run:
+## Setup
+Node.js is required to run this application. Begin by cloning this repository and installing the required Node packages. 
 
-### `npm start`
+```bash
+# Clone this repository
+git clone 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Go into the repository
+cd 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Install required node packages
+npm install
+```
 
-### `npm test`
+Developer specific information and keys are required for smart contract deployment and Moralis server configuration. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+These values must be defined as environment variables within an `.env` file in the root directory.
 
-### `npm run build`
+Rename `.env.example` to `.env` and replace the deault values with your unique values. The list of required variables are listed below.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- REACT_APP_MORALIS_APPLICATION_ID: Application ID provided for a Moralis server.
+- REACT_APP_MORALIS_SERVER_URL:  URL provided for a Moralis server.
+- MNEMONIC: = 12 word mnemonic for wallet used to deploy contracts.
+- MUMBAI_NODE_URL = URL for Mumbai network node. Ex. Moralis Speedy Nodes or Infura.
+- RINKEBY_NODE_URL = URL for Rinkeby network node. Ex. Moralis Speedy Nodes or Infura.
+- ETHERSCAN_API_KEY = API Key from Etherscan.io. Required for Rinkeby contract verification. 
+- POLYGONSCAN_API_KEY = API Key from Polyscan.con. Required for Mumbai contract verification. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Smart Contract Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Smart contract related source code is located in the `Truffle` directory, where a Truffle project is initiated. Follow the below steps to deploy copies of the 'NFT-Me' contract to both testnets, and configure the frontend to interact with them.
 
-### `npm run eject`
+Begin by up updating the 
+Update .env file 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`cd Truffle`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Deploy contracts to testnets
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+`npx truffle migrate --network rinkeby --reset`
+`npx truffle migrate --network mumbi --reset`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Verify Contracts
 
-## Learn More
+`npx truffle run verify NFTMe --network rinkeby`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`npx truffle run verify NFTMe --network mumbai`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Copy contract info to frontent sourcecode
 
-### Code Splitting
+`node scripts/copyContractInfo.js`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Add to OpenSea
 
-### Analyzing the Bundle Size
+`https://testnets.opensea.io/get-listed/step-two`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Start server
 
-### Making a Progressive Web App
+Update .env file 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

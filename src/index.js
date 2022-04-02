@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { MoralisProvider } from 'react-moralis'
+import { ChakraProvider } from '@chakra-ui/react'
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+const APP_ID = process.env.REACT_APP_MORALIS_APPLICATION_ID;
+const SERVER_URL = process.env.REACT_APP_MORALIS_SERVER_URL;
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <MoralisProvider serverUrl={SERVER_URL} appId={APP_ID} >
+    <ChakraProvider>
+      <App />
+    </ChakraProvider>
+  </MoralisProvider>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
