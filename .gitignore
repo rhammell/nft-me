@@ -8,5 +8,6 @@
 .DS_Store
 .env
 
-#Truffle files
+# Contract files
 /Truffle/build
+/src/contracts/contractInfo.json
