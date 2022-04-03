@@ -29,7 +29,7 @@ Rename `.env.example` to `.env` and replace the deault values with your unique v
 | MUMBAI_NODE_URL                  | URL for Mumbai network node; Ex. Moralis Nodes or Infura               |
 | RINKEBY_NODE_URL                 | URL for Rinkeby network node; Ex. Moralis Nodes or Infura              |
 | ETHERSCAN_API_KEY                | Etherscan.io API Key; Required for Rinkeby contract verification       |
-| POLYSCAN_API_KEY                 | Polyscan.con API Key; Required for Mumbai contract verification        |
+| POLYGONSCAN_API_KEY              | Polygonscan.com API Key; Required for Mumbai contract verification     |
 
 ## Smart Contract Setup
 
@@ -41,7 +41,7 @@ cd Truffle
 
 # Deploy a copy of the contract to Rinkeby and Mumbai testnets
 npx truffle migrate --network rinkeby --reset
-npx truffle migrate --network mumbi --reset
+npx truffle migrate --network mumbai --reset
 
 # Verify the contracts on each testnet explorer
 npx truffle run verify NFTMe --network rinkeby

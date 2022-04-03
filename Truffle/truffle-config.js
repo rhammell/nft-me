@@ -6,7 +6,7 @@ const {
   RINKEBY_NODE_URL, 
   MUMBAI_NODE_URL, 
   ETHERSCAN_API_KEY,
-  POLYSCAN_API_KEY
+  POLYGONSCAN_API_KEY
 } = process.env;
 
 module.exports = {
@@ -41,6 +41,6 @@ module.exports = {
   // API Keys requried for etherscan/polygonscan verification
   api_keys: {
     etherscan: ETHERSCAN_API_KEY,
-    polygonscan: POLYSCAN_API_KEY,
+    polygonscan: POLYGONSCAN_API_KEY,
   }
 };
