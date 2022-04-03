@@ -1,69 +1,61 @@
 # NFT-Me
 NFT-Me is a smart contract and companion web app that allows users to capture images from their webcam and mint them as NFTs.
 
-Included is smart contract source code that defines an 'NFT-Me' ERC721 token, intended to be deployed to the Ethereum Rinkeby Testnet and Polygon Mumbai Testnet. The React app frontend provides an interface for users to connect their MetaMask wallet, capture webcam images, and select which network to mint to. 
-
-Images and metadata are uploaded to IPFS, and included in the transaction to create a new token on the contract. 
+Included is source code for a smart contract defining an 'NFT-Me' ERC721 token, and a React app frontend which interacts with the contract. The app provides an interface for connecting a Metamask wallet, captuing webcam images, and selecting which network to mint to. 
 
 ## Setup
 Node.js is required to run this application. Begin by cloning this repository and installing the required Node packages. 
 
 ```bash
 # Clone this repository
-git clone 
+git clone https://github.com/rhammell/nft-me.git
 
 # Go into the repository
-cd 
+cd nft-me
 
 # Install required node packages
 npm install
 ```
 
-Developer specific information and keys are required for smart contract deployment and Moralis server configuration. 
-
-These values must be defined as environment variables within an `.env` file in the root directory.
+Developer specific keys are required for smart contract deployment and Moralis server configuration. These values must be defined as environment variables within an `.env` file in the root directory.
 
 Rename `.env.example` to `.env` and replace the deault values with your unique values. The list of required variables are listed below.
 
 | Variable                         | Description                                                            |
 |----------------------------------|------------------------------------------------------------------------|
-| REACT_APP_MORALIS_APPLICATION_ID | Application ID provided for a Moralis server                           |
-| REACT_APP_MORALIS_SERVER_URL     | URL provided for a Moralis server                                      |
+| REACT_APP_MORALIS_APPLICATION_ID | Moralis server Application ID                                          |
+| REACT_APP_MORALIS_SERVER_URL     | Moralis server URL                                                     |
 | MNEMONIC                         | 12 word mnemonic for wallet used to deploy contracts                   |
-| MUMBAI_NODE_URL                  | URL for Mumbai network node; Ex. Moralis Nodes or Infura       |
-| RINKEBY_NODE_URL                 | URL for Rinkeby network node; Ex. Moralis Nodes or Infura     |
-| ETHERSCAN_API_KEY                | Etherscan.io API Key; Required for Rinkeby contract verification |
-| POLYSCAN_API_KEY              | Polyscan.con API Key; Required for Mumbai contract verification  |
+| MUMBAI_NODE_URL                  | URL for Mumbai network node; Ex. Moralis Nodes or Infura               |
+| RINKEBY_NODE_URL                 | URL for Rinkeby network node; Ex. Moralis Nodes or Infura              |
+| ETHERSCAN_API_KEY                | Etherscan.io API Key; Required for Rinkeby contract verification       |
+| POLYSCAN_API_KEY                 | Polyscan.con API Key; Required for Mumbai contract verification        |
 
 ## Smart Contract Setup
 
-Smart contract related source code is located in the `Truffle` directory, where a Truffle project is initiated. Follow the below steps to deploy copies of the 'NFT-Me' contract to both testnets, and configure the frontend to interact with them.
+Smart contract related source code is located in the `Truffle` directory, where a Truffle project is initiated. Follow the below steps to deploy copies of the 'NFT-Me' contract to two testnets, and configure the frontend to interact with them.
 
-Begin by up updating the 
-Update .env file 
+```bash
+# Navigate into Truffle project 
+cd Truffle
 
-`cd Truffle`
+# Deploy a copy of the contract to Rinkeby and Mumbai testnets
+npx truffle migrate --network rinkeby --reset
+npx truffle migrate --network mumbi --reset
 
-Deploy contracts to testnets
+# Verify the contracts on each testnet explorer
+npx truffle run verify NFTMe --network rinkeby
+npx truffle run verify NFTMe --network mumbai
 
-`npx truffle migrate --network rinkeby --reset`
-`npx truffle migrate --network mumbi --reset`
+# Copy contract details into frontend 
+node scripts/copyContractInfo.js
+```
 
-Verify Contracts
+## Development Server
 
-`npx truffle run verify NFTMe --network rinkeby`
+Depoly a local development server to launch the frontend app: 
 
-`npx truffle run verify NFTMe --network mumbai`
-
-Copy contract info to frontent sourcecode
-
-`node scripts/copyContractInfo.js`
-
-Add to OpenSea
-
-`https://testnets.opensea.io/get-listed/step-two`
-
-## Start server
-
-Update .env file 
-
+```bash
+# Start development server (from project root directory)
+npm start
+```
