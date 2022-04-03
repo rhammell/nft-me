@@ -99,7 +99,7 @@ const MintForm = ({ store }) => {
         contractAddress: contractInfo.networks[store.chainInfo.id].address,
         functionName: "mint",
         params: {
-          tokenURI: `ipfs://${metaIpfs._hash}`,
+          uri: `ipfs://${metaIpfs._hash}`,
         },
       }
       const transaction = await fetch({

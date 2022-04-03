@@ -10,4 +10,4 @@
 
 # Contract files
 /Truffle/build
-/src/contracts/contractInfo.json
+src/contracts/contractInfo.json
