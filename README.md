@@ -19,7 +19,7 @@ npm install
 
 Developer specific keys are required for smart contract deployment and Moralis server configuration. These values must be defined as environment variables within an `.env` file in the root directory.
 
-Rename `.env.example` to `.env` and replace the deault values with your unique values. The list of required variables are listed below.
+Copy `.env.example` as `.env` and replace the deault values with your unique values. The list of required variables are listed below.
 
 | Variable                         | Description                                                            |
 |----------------------------------|------------------------------------------------------------------------|
