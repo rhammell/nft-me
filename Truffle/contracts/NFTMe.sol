@@ -13,7 +13,7 @@ contract NFTMe is ERC721, ERC721Enumerable, ERC721URIStorage, ERC721Burnable, Ow
 
     Counters.Counter private _tokenIdCounter;
 
-    constructor() ERC721("NFT-Me-test", "NFTMe-test") {}
+    constructor() ERC721("NFT-Me", "NFTMe") {}
 
     function mint(string memory uri) 
         public 
