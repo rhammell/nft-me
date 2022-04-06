@@ -11,6 +11,8 @@ import AppStateStore from './stores/AppStateStore'
 
 const appStateStore = new AppStateStore()
 
+
+
 function App() {
   const { enableWeb3, isWeb3Enabled, isWeb3EnableLoading, isAuthenticated } = useMoralis()
 
