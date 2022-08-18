@@ -69,4 +69,6 @@ npm start
 ```
 
 ## Usage
-<img src="img/interface.png" width="128"/>
+<p align="center">
+  <img src="img/interface.png" width="600">
+</p>
