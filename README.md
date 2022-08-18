@@ -1,7 +1,16 @@
 # NFT-Me
 NFT-Me is a smart contract and companion web app that allows users to capture images from their webcam and mint them as NFTs. 
 
-Included is source code for a smart contract defining an 'NFT-Me' ERC721 token, and a React app frontend which interacts with the contract. The app provides an interface for connecting a Metamask wallet, captuing webcam images, and selecting which network to mint to. 
+Included is source code for a smart contract defining an 'NFT-Me' ERC721 token, and a React app frontend which interacts with the contract. The app provides an interface for connecting a Metamask wallet, capturing webcam images, and selecting which network to mint to.
+
+Images and their NFT metadata are uploaded and stored on [IPFS](https://ipfs.io/). The metadata's IPFS URI is included in a call to the contract's `mint` function, which the user is prompted to sign. 
+
+Links to view the minted NFT on OpenSea and view the transaction details on the network's blockchain explorer are provided.
+
+## Contract Information
+By default, the app is configured to interact with deployed versions of the NFT-ME contract on the following networks: 
+- Polygon Mainnet: 
+- Polygon Mumbai Testnet: 0xd0bB2E123A729caC9B413783bAB72572A0a17C5D
 
 ## Setup
 Node.js is required to run this application. Begin by cloning this repository and installing the required Node packages. 
@@ -26,25 +35,24 @@ Copy `.env.example` as `.env` and replace the deault values with your unique val
 | REACT_APP_MORALIS_APPLICATION_ID | Moralis server Application ID                                          |
 | REACT_APP_MORALIS_SERVER_URL     | Moralis server URL                                                     |
 | MNEMONIC                         | 12 word mnemonic for wallet used to deploy contracts                   |
-| MUMBAI_NODE_URL                  | URL for Mumbai network node; Ex. Moralis Nodes or Infura               |
-| RINKEBY_NODE_URL                 | URL for Rinkeby network node; Ex. Moralis Nodes or Infura              |
-| ETHERSCAN_API_KEY                | Etherscan.io API Key; Required for Rinkeby contract verification       |
-| POLYGONSCAN_API_KEY              | Polygonscan.com API Key; Required for Mumbai contract verification     |
+| POLYGON_NODE_URL                 | URL for Polygon mainnet node; Ex. Infura or Alchemy                    |
+| MUMBAI_NODE_URL                  | URL for Mumbai testnet node; Ex. Infura or Alchemy                     |
+| POLYGONSCAN_API_KEY              | Polygonscan.com API Key; Required for contract verification            |
 
 ## Smart Contract Setup
 
-Smart contract related source code is located in the `Truffle` directory, where a Truffle project is initiated. Follow the below steps to deploy copies of the 'NFT-Me' contract to two testnets, and configure the frontend to interact with them.
+Smart contract related source code is located in the `Truffle` directory, where a Truffle project is initiated. Follow the below steps to deploy copies of the 'NFT-Me' contract to the Polygon Mainnet and Mumbai Testnet, and configure the frontend to interact with them.
 
 ```bash
 # Navigate into Truffle project 
 cd Truffle
 
-# Deploy a copy of the contract to Rinkeby and Mumbai testnets
-npx truffle migrate --network rinkeby --reset
+# Deploy a copy of the contract to Polygon Mainnet and Mumbai Testnet
+npx truffle migrate --network polygon --reset
 npx truffle migrate --network mumbai --reset
 
-# Verify the contracts on each testnet explorer
-npx truffle run verify NFTMe --network rinkeby
+# Verify the contracts on each explorer
+npx truffle run verify NFTMe --network polygon
 npx truffle run verify NFTMe --network mumbai
 
 # Copy contract details into frontend 
@@ -59,3 +67,6 @@ Depoly a local development server to launch the frontend app:
 # Start development server (from project root directory)
 npm start
 ```
+
+## Usage
+<img src="img/interface.png" width="128"/>

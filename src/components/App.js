@@ -2,12 +2,12 @@ import { useEffect } from 'react'
 import { useMoralis } from "react-moralis"
 import { Box, Heading, Flex, Container, Spacer, Text } from '@chakra-ui/react'
 
-import WebcamCapture from './components/WebcamCapture'
-import MintForm from './components/MintForm'
-import ConnectWallet from './components/ConnectWallet'
-import WarningMenu from './components/WarningMenu'
+import WebcamCapture from './WebcamCapture'
+import MintForm from './MintForm'
+import ConnectWallet from './ConnectWallet'
+import WarningMenu from './WarningMenu'
 
-import AppStateStore from './stores/AppStateStore'
+import AppStateStore from '../stores/AppStateStore'
 
 const appStateStore = new AppStateStore()
 

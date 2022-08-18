@@ -3,22 +3,21 @@ require('dotenv').config({path: './../.env'});
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const { 
   MNEMONIC, 
-  RINKEBY_NODE_URL, 
+  POLYGON_NODE_URL,
   MUMBAI_NODE_URL, 
-  ETHERSCAN_API_KEY,
   POLYGONSCAN_API_KEY
 } = process.env;
 
 module.exports = {
   networks: {
     development: {
-      host: "127.0.0.1",     // Localhost (default: none)
-      port: 8545,            // Standard Ethereum port (default: none)
-      network_id: "*",       // Any network (default: none)
+      host: "127.0.0.1",     
+      port: 8545,            
+      network_id: "*",
     },
-    rinkeby:{
-      provider: () => new HDWalletProvider(MNEMONIC, RINKEBY_NODE_URL),
-      network_id: 4
+    polygon: {
+      provider: () => new HDWalletProvider(MNEMONIC, POLYGON_NODE_URL),
+      network_id: 137
     },
     mumbai: {
       provider: () => new HDWalletProvider(MNEMONIC, MUMBAI_NODE_URL),
@@ -40,7 +39,6 @@ module.exports = {
 
   // API Keys requried for etherscan/polygonscan verification
   api_keys: {
-    etherscan: ETHERSCAN_API_KEY,
     polygonscan: POLYGONSCAN_API_KEY,
   }
 };

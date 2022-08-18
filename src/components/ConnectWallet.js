@@ -22,7 +22,7 @@ const ConnectWallet = () => {
       size='lg'
       w='250px'
       colorScheme={'blue'}
-      onClick={isAuthenticated ? logout : authenticate}
+      onClick={isAuthenticated ? logout : () => authenticate({signingMessage: "Authentication required for NFT minting."}) }
       variant={isAuthenticated ? 'outline' : 'solid'}
     >
       {(!isAuthenticated || !account) ?

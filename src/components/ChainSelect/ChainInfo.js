@@ -1,13 +1,13 @@
-import { PolygonLogo, ETHLogo } from "./Logos";
+import { PolygonLogo } from "./Logos";
 
 const chains = [
   {
-    key: "0x4",
-    id: "4",
-    value: "Rinkeby Testnet",
-    shortname: "rinkeby",
-    explorer: "https://rinkeby.etherscan.io/",
-    icon: <ETHLogo />,
+    key: "0x89",
+    id: "137",
+    value: "Polygon Mainnet",
+    shortname: "polygon",
+    explorer: "https://polygonscan.com/",
+    icon: <PolygonLogo />,
   },
   {
     key: "0x13881",
