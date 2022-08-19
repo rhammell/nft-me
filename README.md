@@ -84,8 +84,11 @@ When first navigating to the app, users will be prompted by their browser to gra
 
 Mint an NFT with the following steps:
 
-1. Click 'Connet Wallet' to connect your MetaMask wallet to the application and sign an authenication transaction.
-2. Click 'Capture Image' to collect a snapshot from your webcam. Default name and description details will be filled in, which can be edited.
-3. Click 'Select Network' dropdown to choose which network contract the image will be minted to. MetaMask will prompt you to switch to the selected network if not already connected to it. 
-4. Click 'Mint NFT' to begin the minting process. The captured image and metadata are uploaded to IPFS. Then, 
+1. **Connect Wallet** - Click 'Connet Wallet' to connect your MetaMask wallet to the application and sign an authenication transaction.
+
+2. **Capture Image** - Click 'Capture Image' to collect a snapshot from your webcam. Default name and description details will be filled in, which can be edited.
+
+3. **Select Network** - Click 'Select Network' dropdown to choose which network contract the image will be minted to. MetaMask will prompt you to switch to the selected network if not already connected to it. 
+
+4. **Mint NFT** - Click 'Mint NFT' to begin the minting process. The captured image and metadata are uploaded to IPFS. Then, 
 
