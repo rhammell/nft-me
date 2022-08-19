@@ -92,6 +92,6 @@ Mint an NFT with the following steps:
 
 4. **Mint NFT** - Click 'Mint NFT' to begin the minting process. The captured image and its metadata are uploaded to IPFS. Then, the user signs a transaction calling the `mint` function of the NFT-Me contract, passing in the metadata IPFS URI as a parameter. 
 
-When the transaction is complete, links to view the NFT on OpenSea, and view the transaction details on the block explorer are provided.
+    When the transaction is complete, links to view the NFT on OpenSea, and view the transaction details on the block explorer are provided.
 
 
