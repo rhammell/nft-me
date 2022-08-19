@@ -90,7 +90,7 @@ Mint an NFT with the following steps:
 
 3. **Select Network** - Click 'Select Network' to choose which network version of the NFT-Me contract the image will be minted to. MetaMask will prompt you to switch to the selected network if not already connected to it. 
 
-4. **Mint NFT** - Click 'Mint NFT' to begin the minting process. 
+4. **Mint NFT** - Click 'Mint NFT' to begin the minting process:
 
     The captured image is uploaded to IPFS. Next, the NFT metadata (including the image IPFS URI, name and description) is also uploaded to IPFS.
 
