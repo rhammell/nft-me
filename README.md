@@ -37,7 +37,7 @@ Update the `.env` file by replacing the default variable values with your unique
 | MUMBAI_NODE_URL                   | URL for Mumbai testnet node; Ex. Infura or Alchemy                     |
 | POLYGONSCAN_API_KEY               | Polygonscan.com API Key; Required for contract verification            |
 
-Depoly a local development server to launch the frontend app:
+Start a local development server to launch the frontend app:
 
 ```bash
 # Start development server
@@ -48,13 +48,13 @@ Open a browser and navigate to `http://localhost:3000/` to view the application.
 
 ## Smart Contract Configuration
 
-By default, the app is configured to interact with deployed versions of the NFT-ME ERC-721 token contract on the following networks: 
+By default, the app is configured to interact with versions of the NFT-Me ERC-721 token contract depolyed on the following networks: 
 - Polygon Mainnet: 
 - Polygon Mumbai Testnet: 0xd0bB2E123A729caC9B413783bAB72572A0a17C5D
 
 The `Truffle` directory includes an initialized Truffle project with related smart contract source code. 
 
-Follow the below steps to deploy copies of the NFT-Me contract to the Polygon Mainnet and Mumbai Testnet, and configure the frontend to interact with them:
+Follow the steps below to deploy new copies of the NFT-Me contract to the Polygon Mainnet and Mumbai Testnet, and configure the frontend to interact with them:
 
 ```bash
 # Navigate into Truffle project 
@@ -73,6 +73,4 @@ node scripts/copyContractInfo.js
 ```
 
 ## Usage
-<p align="center">
-  <img src="img/interface.png" width="600">
-</p>
+<img align="center" src="img/interface.png" width="600">
