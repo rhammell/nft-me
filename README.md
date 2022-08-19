@@ -1,7 +1,9 @@
 # NFT-Me
 NFT-Me is a smart contract and companion web app that allows users to capture images from their webcam and mint them as NFTs. 
 
-Included is source code for a smart contract defining an 'NFT-Me' ERC721 token, and a React app frontend which interacts with the contract. The app provides an interface for connecting a Metamask wallet, capturing webcam images, and selecting which network to mint to.
+Included is source code for a smart contract defining an 'NFT-Me' ERC-721 token, and a React app frontend which interacts with the contract. 
+
+The app provides an interface for connecting a Metamask wallet, capturing webcam images, and selecting which network to mint to.
 
 ## Setup
 Node.js is required to run this application. Begin by cloning this repository and installing the required Node packages: 
@@ -52,7 +54,9 @@ By default, the app is configured to interact with deployed versions of the NFT-
 - Polygon Mainnet: 
 - Polygon Mumbai Testnet: 0xd0bB2E123A729caC9B413783bAB72572A0a17C5D
 
-Smart contract related source code is located in the `Truffle` directory, where a Truffle project is initiated. Follow the below steps to deploy copies of the NFT-Me contract to the Polygon Mainnet and Mumbai Testnet, and configure the frontend to interact with them.
+The `Truffle` directory includes an initialized Truffle project with related smart contract source code. 
+
+Follow the below steps to deploy copies of the NFT-Me contract to the Polygon Mainnet and Mumbai Testnet, and configure the frontend to interact with them:
 
 ```bash
 # Navigate into Truffle project 
@@ -68,15 +72,6 @@ npx truffle run verify NFTMe --network mumbai
 
 # Copy contract details into frontend 
 node scripts/copyContractInfo.js
-```
-
-## Usage
-
-Depoly a local development server to launch the frontend app: 
-
-```bash
-# Start development server (from project root directory)
-npm start
 ```
 
 ## Usage
