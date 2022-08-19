@@ -73,14 +73,15 @@ node scripts/copyContractInfo.js
 ```
 
 ## Usage
-An example of the app interface is shown below. 
-
-When first navigating to the app, users will be prompted by their browser to grant the app access to their computer's webcam. Once permission is granted, a live feed of the webcam is shown. 
-
+An example of the app interface is shown below: 
 <div align="center">
   <img align="center" src="img/interface.png" width="600">
   <p>NFT-Me Interface<p>
 </div>
+
+When first navigating to the app, users will be prompted by their browser to grant the app access to their computer's webcam. Once permission is granted, a live feed of the webcam is shown. 
+
+
 
 Mint an NFT with the following steps:
 
