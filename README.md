@@ -73,4 +73,19 @@ node scripts/copyContractInfo.js
 ```
 
 ## Usage
-<img align="center" src="img/interface.png" width="600">
+An example of the app interface is shown below. 
+
+When first navigating to the app, users will be prompted by their browser to grant the app access to their computer's webcam. Once permission is granted, a live feed of the webcam is shown. 
+
+<div align="center">
+  <img align="center" src="img/interface.png" width="600">
+  <p>NFT-Me Interface<p>
+</div>
+
+Mint an NFT with the following steps:
+
+1. Connect Wallet - Click the 'Connet Wallet' button to connect your MetaMask wallet to the application and sign an authenication transaction.
+2. Capture Image - Click the 'Capture Image' button to collect a snapshot from your webcam. Default name and description details will be filled in, which can be edited.
+3. Select Network - Click the 'Select Network' dropdown to choose which network contract to mint to. MetaMask will prompt you to switch to the selected network if not already connected to it. 
+4. Mint NFT - Click 'Mint NFT' to 
+
