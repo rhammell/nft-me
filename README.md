@@ -96,6 +96,6 @@ Mint an NFT with the following steps:
 
     The user is then prompted by MetaMask to sign a transaction calling the `mint` function of the selected NFT-Me contract, passing in the metadata IPFS URI as a parameter.
 
-    When the transaction is complete, links to view the NFT on OpenSea, and view the transaction details on the block explorer are provided.
+    When the transaction is complete, links to view the NFT on OpenSea, and view the transaction details on the block explorer are displayed to the user.
 
 
