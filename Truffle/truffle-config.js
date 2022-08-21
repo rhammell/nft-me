@@ -17,11 +17,13 @@ module.exports = {
     },
     polygon: {
       provider: () => new HDWalletProvider(MNEMONIC, POLYGON_NODE_URL),
-      network_id: 137
+      network_id: 137,
+      gasPrice: 50000000000,
     },
     mumbai: {
       provider: () => new HDWalletProvider(MNEMONIC, MUMBAI_NODE_URL),
-      network_id: 80001
+      network_id: 80001,
+      gasPrice: 50000000000,
     },
   },
 
