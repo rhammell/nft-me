@@ -49,8 +49,8 @@ Open a browser and navigate to `http://localhost:3000/` to view the application.
 ## Smart Contract Configuration
 
 The app is configured to interact with versions of the NFT-Me contract depolyed on the following networks: 
-- Polygon Mainnet: 
-- Polygon Mumbai Testnet: 0xd0bB2E123A729caC9B413783bAB72572A0a17C5D
+- Polygon Mainnet: [0x8B4902b93127C9117AD6951A8a4bC8a1Eee306cB](https://polygonscan.com/address/0x8B4902b93127C9117AD6951A8a4bC8a1Eee306cB)
+- Polygon Mumbai Testnet: [0xdf18dFc9222C639a03898B2Cf2995eB215D3BA06](https://mumbai.polygonscan.com/address/0xdf18dFc9222C639a03898B2Cf2995eB215D3BA06)
 
 The `Truffle` directory includes an initialized Truffle project with related smart contract source code. 
 
@@ -95,6 +95,6 @@ Mint an NFT with the following steps:
 
     The user is then prompted by MetaMask to sign a transaction calling the `mint` function of the selected NFT-Me contract, passing in the metadata IPFS URI as a parameter.
 
-    When the transaction is complete, links to view the NFT on OpenSea, and view the transaction details on the block explorer are displayed to the user.
+When the minting is complete, links to view the NFT on OpenSea, and view the transaction details on the block explorer are displayed to the user.
 
 

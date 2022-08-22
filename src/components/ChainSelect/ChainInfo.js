@@ -6,7 +6,8 @@ const chains = [
     id: "137",
     value: "Polygon Mainnet",
     shortname: "polygon",
-    explorer: "https://polygonscan.com/",
+    explorer: "https://polygonscan.com",
+    opensea: "https://opensea.io/assets/matic",
     icon: <PolygonLogo />,
   },
   {
@@ -14,7 +15,8 @@ const chains = [
     id: "80001",
     value: "Mumbai Testnet",
     shortname: "mumbai",
-    explorer: "https://mumbai.polygonscan.com/",
+    explorer: "https://mumbai.polygonscan.com",
+    opensea: "https://testnets.opensea.io/assets/mumbai",
     icon: <PolygonLogo />,
   },
 ];

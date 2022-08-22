@@ -20,7 +20,9 @@ import {
   ModalHeader,
   ModalBody,
   ModalCloseButton,
-  Spinner
+  Spinner,
+  Center,
+  Stack
 } from '@chakra-ui/react'
 import { observer } from "mobx-react"
 import { showErrorToast } from '../helpers/notifications'
@@ -189,41 +191,37 @@ const MintForm = ({ store }) => {
           <ModalBody
             p={12}
           >
-            <VStack>
+            <Center>
               {isProcessingComplete ?
-                <>
-                  <Text fontWeight={'bold'}>Woohoo! Your NFT has been minted!</Text>
+                <VStack>
+                  <Text 
+                    fontWeight={'bold'}
+                    mb={4}
+                  >
+                    Woohoo! Your NFT has been minted!
+                  </Text>
                   <Link 
-                    href={
-                      'https://testnets.opensea.io/assets/' + 
-                      store.chainInfo.shortname + '/' +
-                      contractInfo.networks[store.chainInfo.id].address + '/' +
-                      tokenId 
-                    } 
+                    href={`${store.chainInfo.opensea}/${contractInfo.networks[store.chainInfo.id].address}/${tokenId}`} 
                     color="blue"
                     isExternal
                   >
                     View on OpenSea
                   </Link>
                   <Link 
-                    href={
-                      store.chainInfo.explorer +
-                      'address/' + 
-                      contractInfo.networks[store.chainInfo.id].address
-                    } 
+                    href={`${store.chainInfo.explorer}/address/${contractInfo.networks[store.chainInfo.id].address}`}
                     color="blue"
                     isExternal
                   >
                     View on BlockChain Explorer
                   </Link>
-                </>
+                </VStack>
                 :
-                <>
+                <VStack>
                   <Spinner size='lg' />
                   <Text>{processingStatus}</Text>
-                </>
+                </VStack>
               }
-            </VStack>
+            </Center>
           </ModalBody>
         </ModalContent>
       </Modal>
