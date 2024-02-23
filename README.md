@@ -48,7 +48,7 @@ Open a browser and navigate to `http://localhost:3000/` to view the application.
 
 ## Smart Contract Configuration
 
-The app is configured to interact with versions of the NFT-Me contract depolyed on the following networks: 
+The app is configured to interact with versions of the NFT-Me contract deployed on the following networks: 
 - Polygon Mainnet: [0x8B4902b93127C9117AD6951A8a4bC8a1Eee306cB](https://polygonscan.com/address/0x8B4902b93127C9117AD6951A8a4bC8a1Eee306cB)
 - Polygon Mumbai Testnet: [0xdf18dFc9222C639a03898B2Cf2995eB215D3BA06](https://mumbai.polygonscan.com/address/0xdf18dFc9222C639a03898B2Cf2995eB215D3BA06)
 
@@ -83,15 +83,15 @@ When first navigating to the app, users will be prompted by their browser to gra
 
 Mint an NFT with the following steps:
 
-1. **Connect Wallet** - Click 'Connet Wallet' to connect your MetaMask wallet accounts to the application and sign an authenication transaction.
+1. **Connect Wallet** - Click 'Connet Wallet' to connect your MetaMask wallet accounts to the application and sign an authentication transaction.
 
-2. **Capture Image** - Click 'Capture Image' to collect a snapshot from your webcam. Default name and description details will be filled in, which can be edited. These details will be included in the NFT metadata.
+2. **Capture Image** - Click 'Capture Image' to collect a snapshot from your webcam. The default name and description details will be filled in, which can be edited. These details will be included in the NFT metadata.
 
 3. **Select Network** - Click 'Select Network' to choose which network version of the NFT-Me contract the image will be minted to. MetaMask will prompt you to switch to the selected network if not already connected to it. 
 
 4. **Mint NFT** - Click 'Mint NFT' to begin the minting process:
 
-    The captured image is uploaded to IPFS. Next, the NFT metadata (including the image IPFS URI, name and description) is also uploaded to IPFS.
+    The captured image is uploaded to IPFS. Next, the NFT metadata (including the image IPFS URI, name, and description) is also uploaded to IPFS.
 
     The user is then prompted by MetaMask to sign a transaction calling the `mint` function of the selected NFT-Me contract, passing in the metadata IPFS URI as a parameter.
 
